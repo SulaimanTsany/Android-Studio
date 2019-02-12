@@ -4,10 +4,15 @@
     <string name="name">Sulaeman</string>
     <string name="student_id">H13116002</string>
     <string name="class_name">Pemrograman Mobile B</string>
-    <string name="address">Jl. Perintis Kemerdekaan Km.10, Ramsis Unhas Unit 1 Blok B no.322</string>
+    <string name="address">Jl. Perintis Kemerdekaan Km.10, Ramsis Unhas</string>
     <string name="phone_number">085525327542</string>
     <string name="home_number">14022</string>
     <string name="email">sulaiman.tsany@gmail.com</string>
     <string name="github">SulaimanTsany</string>
-    <string name="birth">2 January 1998</string>
+    <string name="birth">2 January</string>
+    <string name="quote">Catatan:
+        \n-Gunakan orientasi Landscape
+        \n-Klik tombol Edit maka tidak akan terjadi apa-apa
+        \n-Source code : https://github.com/SulaimanTsany/Android-Tugas1
+    </string>
 </resources>
