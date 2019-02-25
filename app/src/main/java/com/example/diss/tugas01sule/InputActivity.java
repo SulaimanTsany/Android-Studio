@@ -1,5 +1,6 @@
 package com.example.diss.tugas01sule;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,5 +16,8 @@ public class InputActivity extends AppCompatActivity {
 
     public void saveButton (View view) {
         Toast.makeText(this, "saved", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 }

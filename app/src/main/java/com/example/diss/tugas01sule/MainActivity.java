@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public void editButton(View view) {
         Intent intent = new Intent(this, InputActivity.class);
         startActivity(intent);
+        this.finish();
     }
 }
 

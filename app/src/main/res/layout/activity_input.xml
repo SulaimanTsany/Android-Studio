@@ -1,45 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Input Data"/>
-
+    android:background="@drawable/gradient_top"
+    >
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:background="@drawable/border_shadow"
+        android:layout_gravity="center_horizontal">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nama"/>
-        <EditText
-            android:id="@+id/input_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nim"/>
-        <EditText
-            android:id="@+id/input_nim"
+            android:fontFamily="@font/sule_handwrite"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="Input Data"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Nama"/>
+            <EditText
+                android:layout_marginEnd="10dp"
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Nim"/>
+            <EditText
+                android:layout_marginEnd="10dp"
+                android:id="@+id/input_nim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Lahir"/>
+            <EditText
+                android:id="@+id/input_birthday-d"
+                android:layout_marginEnd="5dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:tooltipText="//dd"
+                android:maxLength="2"/>
+            <EditText
+                android:id="@+id/input_birthday-m"
+                android:layout_marginEnd="5dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:tooltipText="/mm"
+                android:maxLines="1"
+                android:maxLength="15"/>
+            <EditText
+                android:id="@+id/input_birthday-h"
+                android:layout_marginEnd="5dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:tooltipText="//yyyy"
+                android:maxLength="4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Alamat"/>
+            <EditText
+                android:layout_marginEnd="10dp"
+                android:id="@+id/input_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Nomor HP"/>
+            <EditText
+                android:id="@+id/input_phone"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Email"/>
+            <EditText
+                android:id="@+id/input_email"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+        </LinearLayout>
+
+        <Button
+            android:onClick="saveButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="5dp"
+            android:text="save"
+            android:textColor="#fff"
+            android:textSize="18sp"/>
+
     </LinearLayout>
-    <Button
-        android:onClick="saveButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save"/>
-
-
-</LinearLayout>
+</ScrollView>
