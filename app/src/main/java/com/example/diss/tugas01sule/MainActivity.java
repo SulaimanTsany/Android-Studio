@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     TextView address;
     TextView phone;
     TextView email;
+    TextView birtday;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         address = findViewById(R.id.address);
         phone = findViewById(R.id.phone);
         email = findViewById(R.id.email);
+        birtday = findViewById(R.id.birthday);
 
 //        Bundle bundle = getIntent().getExtras();
 //        name.setText(bundle.getString("name", getString(R.string.name)));
@@ -42,14 +44,16 @@ public class MainActivity extends AppCompatActivity {
 //        email.setText(bundle.getString("email", getString(R.string.email)));
 
         Intent intent = getIntent();
-        name.setText(intent.getStringExtra("name"));
-        nim.setText(intent.getStringExtra("nim"));
-        address.setText(intent.getStringExtra("address"));
-        phone.setText(intent.getStringExtra("phone"));
-        email.setText(intent.getStringExtra("email"));
+        if (intent != null) {
+            name.setText(intent.getStringExtra("name"));
+            nim.setText(intent.getStringExtra("nim"));
+            address.setText(intent.getStringExtra("address"));
+            phone.setText(intent.getStringExtra("phone"));
+            email.setText(intent.getStringExtra("email"));
+            birtday.setText(intent.getStringExtra("birthday"));
+        }
 
 //        final Button button = findViewById(R.id.edit_button);
-
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @RequiresApi(api = Build.VERSION_CODES.M)
 //            public void onClick(View v) {
@@ -63,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void editButton(View view) {
         Intent intent = new Intent(this, InputActivity.class);
+        intent.putExtra("name", name.getText().toString());
+        intent.putExtra("nim", nim.getText().toString());
+        intent.putExtra("address", address.getText().toString());
+        intent.putExtra("phone", phone.getText().toString());
+        intent.putExtra("email", email.getText().toString());
+
         startActivity(intent);
         this.finish();
     }

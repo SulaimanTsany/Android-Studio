@@ -12,7 +12,21 @@
     <string name="birth">2 January</string>
     <string name="quote">Catatan:
         \n-Gunakan orientasi Landscape
-        \n-Klik tombol Edit maka tidak akan terjadi apa-apa
+        \n-Klik tombol Edit untuk mengubah data
         \n-Source code : https://github.com/SulaimanTsany/Android-Tugas1
     </string>
+    <string-array name="month">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
 </resources>

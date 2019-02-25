@@ -2,11 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_top">
+    android:background="@drawable/gradient_top"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:orientation="vertical"
         android:paddingBottom="10dp"
         android:background="@drawable/border_shadow"
@@ -18,9 +21,15 @@
             android:fontFamily="@font/sule_handwrite"
             android:textSize="30sp"
             android:gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"
+            android:textColor="#000"
             android:text="Input Data"/>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/colorPrimary"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,7 +91,7 @@
                 android:maxLines="1"
                 android:maxLength="15"/>
             <EditText
-                android:id="@+id/input_birthday-h"
+                android:id="@+id/input_birthday-y"
                 android:layout_marginEnd="5dp"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -123,7 +132,8 @@
                 android:layout_marginEnd="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="phone"/>
+                android:inputType="phone"
+                android:maxLength="13"/>
         </LinearLayout>
 
         <LinearLayout
