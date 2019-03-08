@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,11 +37,14 @@ public class TugasDialogActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 EditText nameTV = dialogView.findViewById(R.id.dialog_name);
                 EditText nimTV = dialogView.findViewById(R.id.dialog_nim);
+                RadioGroup genderRadio = dialogView.findViewById(R.id.radio_group);
+                RadioButton radio = (RadioButton) dialogView.findViewById(genderRadio.getCheckedRadioButtonId());
+                Spinner spinner = dialogView.findViewById(R.id.spinner_religion);
 
                 String name = nameTV.getText().toString();
                 String nim = nimTV.getText().toString();
-                String gender = "laki";
-                String religion = "a";
+                String gender = radio.getText().toString();
+                String religion = spinner.getSelectedItem().toString();
 
                 Toast.makeText(TugasDialogActivity.super.getApplicationContext(),
                         "Nama = "+name

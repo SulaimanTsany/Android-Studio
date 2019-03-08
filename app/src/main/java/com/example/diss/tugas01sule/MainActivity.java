@@ -76,5 +76,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         this.finish();
     }
+
+    public void dialogToastButton(View view) {
+        Intent intent = new Intent(this, TugasDialogActivity.class);
+        startActivity(intent);
+        this.finish();
+    }
 }
 
